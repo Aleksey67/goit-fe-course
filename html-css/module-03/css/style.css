@@ -21,10 +21,8 @@ body {
 }
 
 .page-header {
-    /* margin-bottom: 102px;
-    margin-top: 70px; */
     padding: 70px 0 37px;
-    /* background-color: blueviolet; */
+   
 }
    
 .site-navigation {
@@ -43,18 +41,6 @@ body {
     display: inline-block;
     margin: 0 50px;
 }
-
-/* .lifestyle {
-    margin-right: 121px;
-}
-
-.photodiary {
-    margin-right: 103px;
-}
-
-.music {
-    margin-right: 95px;
-} */
 
 .site-navigation a:hover,
 .site-navigation a:focus {
