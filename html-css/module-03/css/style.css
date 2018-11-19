@@ -16,7 +16,7 @@ body {
 
 .container {
     width: 902px;
-    margin: 0 auto;    
+    margin: 0 auto;  
 }
 
 .page-header { 
@@ -26,6 +26,7 @@ body {
 .page-nav {
     padding: 76px 0 76px;   
 }
+
 .site-navigation {
     margin: 0;
     padding: 0;
@@ -55,11 +56,11 @@ body {
     font-size: 0;
 } 
 
- img {
-     display: block;
-     max-width: 100%;
-     height: auto;
- }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 .article {
     display: inline-block;
@@ -72,13 +73,12 @@ body {
     margin-right: 0;
 }
 
- .article-category {
+.article-category {
     font-size: 14px;
 }
 
 h3 {
     font-size: 30px;
-
 }
 
 .article-desc {
@@ -98,8 +98,7 @@ h3 {
 
 .footer {
     text-align: center;
-    margin-bottom: 50px;
-    padding: 0 369px;
+    padding: 0 0 50px;
 }
 
   
