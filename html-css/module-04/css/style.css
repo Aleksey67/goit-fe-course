@@ -41,6 +41,7 @@ body {
     font-weight: 300;
     text-decoration: none;
 }
+
 .logo__link b {
     color: #1abc9c;
 }
@@ -81,6 +82,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
 }
+
 .list__link:hover,
 .list__link:focus {
     color: #1abc9c;
@@ -150,10 +152,12 @@ h2::after {
     text-transform: uppercase;
     font-weight: bold;
 }
+
 .item-bottom .name {
     float: left;
     padding: 0 0 0 14px;
 }
+
 .item-bottom .price {
     float: right;
     padding: 0 12px;
@@ -163,13 +167,11 @@ h2::after {
 .gallery__item:hover .item-bottom {
     background: #1abc9c;
 }
+
 .gallery__item:hover .item-bottom .price {
     background: #7fd9c7;
 }
 
-.news {
-
-}
 .news__item {
     float: left;
     width: 350px;
@@ -177,18 +179,22 @@ h2::after {
     text-align: left;
     font-family: "Open Sans", arial;
 }
+
 .news__item:nth-child(1) {
     margin-left: 0;
 }
+
 .news__item img {
     vertical-align: top;
 }
+
 .news__item h3 {
     margin-top: 15px;
     color: #555252;
     font-size: 18px;
     font-weight: 600;
 }
+
 .news__item h3::after {
     display: block;
     content: "";
@@ -197,12 +203,14 @@ h2::after {
     margin-top: 15px;
     background: #4ec6ab;
 }
+
 .news__item p {
     margin: 25px 0 16px;
     color: #555252;
     font-size: 14px;
     line-height: 26px;
 }
+
 .news__item button {
     border: none;
     padding: 0 43px;
@@ -212,4 +220,5 @@ h2::after {
     font-weight: 300;
     font-size: 16px;
     border-radius: 2px;
+    cursor: pointer;
 }
