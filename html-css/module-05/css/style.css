@@ -108,11 +108,10 @@ body {
 
 .block-wrapper {
 	position: relative;
-	background-image: url("/img/Rectangle.png");
+	background-image: url("img/Rectangle.png");
 	padding: 300px 15px;
 	background-position: center;
 	background-size: cover;
-	/* backgroun: rgba(0, 0, 0, 0.3); */
 }
 
 .block-wrapper::after {
@@ -223,8 +222,6 @@ h2::after {
 }
 
 .gallery__item {
-	/* display: inline-block; */
-	/* vertical-align: top; */
 	width: 255px;
 	background: azure-blue;
 	margin-right: 30px;
@@ -245,8 +242,6 @@ h2::after {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	/* font-size: 0; */
-	/* height: 250px; */
 	object-fit: cover;
 }
 
