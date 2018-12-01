@@ -108,7 +108,7 @@ body {
 
 .block-wrapper {
 	position: relative;
-	background-image: url("img/Rectangle.png");
+	background-image: url("../img/Rectangle.png");
 	padding: 300px 15px;
 	background-position: center;
 	background-size: cover;
