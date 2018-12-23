@@ -157,7 +157,7 @@ body {
 	background: #55a18f;
 	top: 50%;
 	cursor: pointer;
-	transition: opacity 0.5s ease-in-out;
+	transition: background-color 0.5s ease-in-out;
 }
 
 .arrow svg {
@@ -174,12 +174,12 @@ body {
 	transition: fill 0.5s ease-in-out;
 }
 
-.arrow:hover svg {
+/* .arrow:hover svg {
 	fill: grey;
-}
+} */
 
 .arrow:hover {
-	opacity: 0.6;
+	background: rgba(85, 161, 143, 0.6);
 }
 
 .left-arrow {
