@@ -108,14 +108,13 @@ body {
 
 .block-wrapper {
 	position: relative;
-	background-image: url("../img/Rectangle.png");
-	padding: 300px 15px;
+	background-image: url(../img/Rectangle.png);
+	padding: 180px 115px;
 	background-position: center;
 	background-size: cover;
 }
 
 .block-wrapper::after {
-	display: block;
 	content: "";
 	position: absolute;
 	left: 0;
@@ -124,11 +123,12 @@ body {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.5);
 }
-
+  
 .content-wrapper {
 	position: relative;
 	text-align: center;
 	padding: 0 170px;
+	padding-bottom: 90px;
 	z-index: 1;
 }
 
@@ -140,56 +140,52 @@ body {
 }
 
 .subtitle {
-	margin: 20px auto 0;
+	margin: 15px auto 0;
 	font-size: 24px;
 	color: #ffffff;
 	width: 750px;
 	max-width: 100%;
 	text-align: left;
 }
-
+  
 .arrow {
 	position: absolute;
-	margin-top: 20px;
 	width: 104px;
 	height: 104px;
-	padding: 32px 0 0;
-	background: #55a18f;
+	padding: 32px;
+	background: #55a18f;;
 	top: 50%;
 	cursor: pointer;
-	transition: background-color 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
 }
-
-.arrow svg {
+  
+.icon-wrapper {
+	display: block;
+}
+  
+.iconn-wrapper svg {
 	height: 40px;
 	fill: #fff;
 }
-
-.icon-wrapper {
-	flex: block;
-}
-
-.icon-wrapper svg {
-	fill: #fff;
-	transition: fill 0.5s ease-in-out;
-}
-
-/* .arrow:hover svg {
-	fill: grey;
-} */
-
+  
+.arrow:hover svg {
+	height: 40px;
+	fill: white;
+ }
+  
 .arrow:hover {
-	background: rgba(85, 161, 143, 0.6);
+	opacity: 0.6;
 }
-
+  
 .left-arrow {
-	left: 200px;
-	top: 0;
+	left: 110px;
+	transform: translateY(-80%);
 }
-
+  
 .right-arrow {
-	right: 200px;
-	top: 0;
+	right: 110px;
+	transform-origin: center;
+	transform: translateY(-80%) rotate(180deg);
 }
 
 h2 {
@@ -347,6 +343,10 @@ img {
 	left: 10px;
 	width: 30px;
 	height: 30px;
+}
+
+.icon-wrapper svg {
+	fill: #fff;
 }
 
 .text {
