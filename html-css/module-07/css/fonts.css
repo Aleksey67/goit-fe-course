@@ -1,29 +1,26 @@
-/* montserrat-regular - latin */
+/* Montserrat */
 @font-face {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Montserrat Regular'), local('Montserrat-Regular'),
-		 url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'),
-		 url('../fonts/montserrat-v12-latin-regular.woff') format('woff'),;
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 400;
+     src: url('../fonts/montserrat-v12-latin-regular.eot'); 
+     src: local('Montserrat Regular'), local('Montserrat-Regular'),
+          url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'), 
+          url('../fonts/montserrat-v12-latin-regular.woff') format('woff'), 
+          url('../fonts/montserrat-v12-latin-regular.ttf') format('truetype'), 
+          url('../fonts/Montserrat/montserrat-v12-latin-regular.svg#Montserrat') format('svg'); 
 }
-
-  /* montserrat-700 - latin */
-@font-face {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 700;
-	src: local('Montserrat Bold'), local('Montserrat-Bold'),
-		 url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'),
-		 url('../fonts/montserrat-v12-latin-700.woff') format('woff');
-}
-
-/* Droid Serif */
-@font-face {
-	font-family: 'Droid Serif';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/DroidSerif-Italic-webfont.woff') format('woff');
+ 
+ @font-face {
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 700;
+     src: url('../fonts/montserrat-v12-latin-700.eot'); 
+     src: local('Montserrat Bold'), local('Montserrat-Bold'),
+          url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'), 
+          url('../fonts/montserrat-v12-latin-700.woff') format('woff'),
+          url('../fonts/montserrat-v12-latin-700.ttf') format('truetype'),
+          url('../fonts/Montserrat/montserrat-v12-latin-700.svg#Montserrat') format('svg');
 }
 
 /* Roboto-Slab */
@@ -31,27 +28,34 @@
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/RobotoSlab/roboto-slab-v7-latin-regular.eot');
+    src: url('../fonts/roboto-slab-v7-latin-regular.eot'); /* IE9 Compat Modes */
     src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
-         url('../fonts/roboto-slab-v7-latin-regular.woff2') format('woff2'), 
-         url('../fonts/roboto-slab-v7-latin-regular.woff') format('woff'),
-         url('../fonts/roboto-slab-v7-latin-regular.ttf') format('truetype');    
-  }
+         url('../fonts/RobotoSlab/roboto-slab-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-slab-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-slab-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-slab-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/RobotoSlab/roboto-slab-v7-latin-regular.svg#RobotoSlab') format('svg'); /* Legacy iOS */
+}
 
 /* Droid Serif */
 @font-face {
-	font-family: 'Droid Serif';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/DroidSerif-Italic-webfont.woff') format('woff');
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/DroidSerif-Italic-webfont.eot');
+  src: url('../fonts/DroidSerif/DroidSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DroidSerif-Italic-webfont.woff') format('woff'),
+       url('../fonts/DroidSerif-Italic-webfont.ttf') format('truetype'),
+       url('../fonts/DroidSerif/DroidSerif-Italic-webfont.svg#DroidSerif') format('svg');
+
 }
 
 /* WisdomScript */
 @font-face {
-	font-family: 'WisdomScriptAJ';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/WisdomScriptAJ.eot');
-	src: url('../fonts/WisdomScriptAJ.woff') format('woff'), 
-		 url('../fonts/WisdomScriptAJ.ttf') format('truetype');
-	}
+  font-family: 'WisdomScriptAJ';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/WisdomScriptAJ.eot');
+  src: url('../fonts/WisdomScriptAJ.woff') format('woff'), 
+       url('../fonts/WisdomScriptAJ.ttf') format('truetype');
+}
