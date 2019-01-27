@@ -76,7 +76,7 @@ body {
 }
 .site-navigation-item a::after {
 	content: "";
-	position: asbolute;
+	position: absolute;
 	display: block;
 	margin-top: 20px;
 	width: 100%;
