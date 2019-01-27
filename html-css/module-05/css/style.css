@@ -125,6 +125,7 @@ body {
 }
 
 .banner-content {
+	position: relative;
     margin: 0 auto;
     color: #ffffff;
     text-transform: uppercase;
@@ -167,16 +168,18 @@ body {
     cursor: pointer;
 }
 
-.banner-btn-next {
-    right: 120px;
-    background-image: url(../img/arrow-next.png);
+.banner-btn-prev {
+	position: absolute;
+	left: -200px;
+    background-image: url(../img/arrow-prev.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.banner-btn-prev {
-    left: 120px;
-    background-image: url(../img/arrow-prev.png);
+.banner-btn-next {
+	position: absolute;
+    right: -200px;
+    background-image: url(../img/arrow-next.png);
     background-repeat: no-repeat;
     background-position: center;
 }
