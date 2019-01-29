@@ -332,7 +332,8 @@ p {
     color: #333333;
 }
 
-.copyright span {
+.copyright a {
+    text-decoration: none;
     color: #f38181;
 }
 
@@ -357,7 +358,7 @@ input[type="submit"] {
   font-weight: 700;
   color: #ffffff;
   font-size: 14px;
-  height: 40px;
+  height: 38px;
   width: 150px;
   border: none;
   background-color: #95e1d3;
