@@ -337,6 +337,10 @@ p {
     color: #f38181;
 }
 
+form {
+    display: flex;
+}
+
 input[type="email"] { 
   height: 38px;
   width: 228px;
