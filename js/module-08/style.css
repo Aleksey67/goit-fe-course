@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.image-gallery {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.fullview {
+  width: 600px;
+}
+
+img {
+  width: 100%;
+}
+
+.preview {
+  width: 600px;
+  display: flex;
+}
+
+li {
+  width: 200px;
+  list-style: none;
+}
