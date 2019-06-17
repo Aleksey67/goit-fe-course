@@ -1,24 +1,42 @@
 'use strict';
+const imageGallery = document.querySelector('.image-gallery')
+const fullview = imageGallery.querySelector('.fullview > img')
+const preview =  imageGallery.querySelector('.preview')
+
 const galleryItems = [
-  { preview: 'img/preview-1.jpg', fullview: 'img/fullview-1.jpg', alt: 'alt text 1' },
-  { preview: 'img/preview-2.jpg', fullview: 'img/fullview-2.jpg', alt: 'alt text 2' },
-  { preview: 'img/preview-3.jpg', fullview: 'img/fullview-3.jpg', alt: 'alt text 3' },
-  { preview: 'img/preview-4.jpg', fullview: 'img/fullview-4.jpg', alt: 'alt text 4' },
+  { preview: '01-320px.jpg', fullview: '01-1280px.jpg', alt: "alt text 1" },
+  { preview: '02-320px.jpg', fullview: '02-1280px.jpg', alt: "alt text 2" },
+  { preview: '03-320px.jpg', fullview: '03-1280px.jpg', alt: "alt text 3" },
+  { preview: '04-320px.jpg', fullview: '04-1280px.jpg', alt: "alt text 4" },
+  { preview: '05-320px.jpg', fullview: '05-1280px.jpg', alt: "alt text 5" },
+  { preview: '06-320px.jpg', fullview: '06-1280px.jpg', alt: "alt text 6" },
 ];
-
-const imageGallery = document.querySelector('.image-gallery'),
-      fullview = document.querySelector('.fullview'),
-      preview = document.querySelector('.preview');
-
-fullview.innerHTML = `<img src="${galleryItems[0].fullview}">`;
-
-const inPreview = galleryItems.reduce((acc, el) => acc + `<li><img src="${el.preview}" data-fullview="${el.fullview}" alt="${el.alt}"></li>`,'');
-
-preview.innerHTML = inPreview;
-
-function result(event) {
-  console.log(event.target.dataset.fullview);
-  if (event.target.nodeName === 'IMG') {fullview.innerHTML = `<img src="${event.target.dataset.fullview}">`}
+const PATH = 'https://bolshunova.github.io/go-it-fe-js/Hw-Js-08/img';
+const insertImage = (img, s, a) => {
+  img.src = s;
+  img.alt = a;
 }
+const setPreview = arr => arr.map(e =>
+    `<li>
+        <img src="${PATH}/${e.preview}" data-fullview="${e.fullview}" alt="${e.alt}">
+    </li>`
+    ).join('')
+;
+const getAlt = (arr, prop, source) =>  arr.filter(e => e[prop] === source)[0].alt;
 
-preview.addEventListener('click', result);
+function setFullview ({target}) {
+    if(target.nodeName !== 'IMG') return;
+    const imgSrc = `${PATH}/${target.dataset.fullview}`;
+    const imgAlt =  getAlt(galleryItems, 'fullview', target.dataset.fullview);
+    insertImage(fullview, imgSrc, imgAlt)
+}
+preview.addEventListener('click', setFullview);
+
+// initial
+(function (arr, elem) {
+    const imgSrc = `${PATH}/${arr[0].fullview}`;
+    const imgAlt =  arr[0].alt;
+    insertImage(elem, imgSrc, imgAlt)
+    preview.innerHTML = setPreview(galleryItems)
+})(galleryItems, fullview);
+
