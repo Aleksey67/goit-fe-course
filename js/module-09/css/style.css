@@ -1,0 +1,40 @@
+body {
+    padding-top: 1rem;
+}
+.watch {
+    width: 360px;
+    margin: auto;
+    font-size: 24px;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+.watch-text {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 30px;
+}
+
+.watch-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.watch-button {
+    border-radius: 5px;
+    width: 30%;
+    padding: .5rem 0;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.watch-button:hover {
+    opacity: 1;
+}
+
+.watch-list {
+    height: 10rem;
+    overflow: auto;
+}
