@@ -118,58 +118,59 @@ const laptops = [
 ]; 
 
 const container = document.querySelector('.list'),
-      reset = document.querySelector('[type="reset"]'),
-      form = document.querySelector('.js-form'),
-      inputs = Array.from(document.querySelectorAll('[type="checkbox"]'));
+  reset = document.querySelector('[type="reset"]'),
+  form = document.querySelector('.js-form'),
+  inputs = Array.from(document.querySelectorAll('[type="checkbox"]'));
 
 const source = document.querySelector('.laptops-s').innerHTML.trim(),
-      template = Handlebars.compile(source);
+  template = Handlebars.compile(source);
 
 let result = function() {
-
   const checkedProperty = inputs.filter(el => el.checked);
-
+  
   const property = {
     size: [],
     color: [],
     release_date: [],
   };
 
-  function writeParam() {
-    checkedProperty.forEach(({name, value}) => {
-    
-      if(name === 'size') {
-        property.size.push(value);
-      }else if (name === 'color') {
-        property.color.push(value);
-      }else{
-        property.release_date.push(value);
-      }
+  checkedProperty.forEach(({name, value}) => {
+    if(name === 'size') {
+      property.size.push(value);
+    }else if (name === 'color') {
+      property.color.push(value);
+    }else{
+      property.release_date.push(value);
     }
-  )}
+  });
 
-  writeParam();
+  const me = laptops.filter(({size, color, release_date}) => {
+    const chSize = String(size);
+    const chDate = String(release_date);
 
-  
-const me = laptops.filter(({size, color, release_date}) => {
-  const chSize = String(size);
-  const chDate = String(release_date);
-  
-  return property.size.includes(chSize) || property.color.includes(color) || property.release_date.includes(chDate);
-});
+    if (property.size.length && !property.size.includes(chSize)) return false;
+    if (property.color.length && !property.color.includes(color)) return false;
+    if (property.release_date.length && !property.release_date.includes(chDate)) return false;
+    
+    return true;
+  });
 
-const markup = template(me);
-  console.log(markup)
-return markup;
+  const markup = template(me);
+  return markup;
 };
+
+let showResult = function() {
+  //container.insertAdjacentHTML('afterbegin', result());
+  container.innerHTML = result();
+}
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  container.insertAdjacentHTML('afterbegin', result());
-  console.log()
+  showResult();
 });
 
-reset.addEventListener('click', () => {
-  const div = document.querySelectorAll('.item');
-  div.forEach(el => el.remove());
-}); 
+form.addEventListener('reset', () => {
+  setTimeout(() => showResult(), 1);
+});
+
+showResult();
